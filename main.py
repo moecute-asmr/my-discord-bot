@@ -1,6 +1,7 @@
 import discord
 import os
-print(f"環境変数 DISCORD_TOKEN: '{os.getenv('DISCORD_TOKEN')}'")
+print("鍵一覧:", os.environ.keys())
+print("DISCORD_TOKEN=", os.getenv("DISCORD_TOKEN"))
 
 intents = discord.Intents.default()
 intents.message_content = True  # メッセージ内容を読むのに必要
