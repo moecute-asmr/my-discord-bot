@@ -2,20 +2,20 @@ import discord
 import os
 
 intents = discord.Intents.default()
-intents.message_content = True  # ƒƒbƒZ[ƒW“à—e‚ğ“Ç‚Ş‚Ì‚É•K—v
+intents.message_content = True  # ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å†…å®¹ã‚’èª­ã‚€ã®ã«å¿…è¦
 
 client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    print(f'ƒƒOƒCƒ“‚µ‚Ü‚µ‚½: {client.user}')
+    print(f'ãƒ­ã‚°ã‚¤ãƒ³ã—ã¾ã—ãŸ: {client.user}')
 
 @client.event
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == '‚Ò‚ñI':
-        await message.channel.send('‚Û‚ñI')
+    if message.content == 'ã´ã‚“ï¼':
+        await message.channel.send('ã½ã‚“ï¼')
 
 token = os.getenv("DISCORD_TOKEN")
 client.run(token)
