@@ -19,8 +19,6 @@ async def on_message(message):
         await message.channel.send('ぽん！')
 
 token = os.getenv("DISCORD_TOKEN")
-
-token = os.getenv("MTM4MzkzNjc2OTExMTYyMTcwMw.Glrd6N.itI-uh_YHDH2sB3GzNXzWEM0dybLHtAk_tR3ps")
 print(f"DISCORD_TOKEN={token}")  # ここでトークンがNoneか確認
 if token is None:
     print("ERROR: DISCORD_TOKENが設定されていません！")
